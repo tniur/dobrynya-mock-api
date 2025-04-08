@@ -1,5 +1,5 @@
 import json
-from app.db.models import Base, Clinic, Profession
+from app.db.models import Base, Clinic, Profession, User, user_clinics, user_professions
 from app.db.database import engine, SessionLocal
 
 def load_data():
@@ -15,6 +15,21 @@ def load_data():
         professions = json.load(f)
         for item in professions:
             db.add(Profession(**item))
+
+    with open("../data/users.json") as f:
+        users = json.load(f)
+        for item in users:
+            professions = item.pop("profession", [])
+            clinics = item.pop("clinic", [])
+
+            user = User(**item)
+            db.add(user)
+            db.flush()
+
+            for pid in professions:
+                db.execute(user_professions.insert().values(user_id=user.id, profession_id=pid))
+            for cid in clinics:
+                db.execute(user_clinics.insert().values(user_id=user.id, clinic_id=cid))
 
     db.commit()
     db.close()
