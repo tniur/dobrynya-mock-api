@@ -1,5 +1,5 @@
 import json
-from app.db.models import Base, Clinic, Profession, User, user_clinics, user_professions
+from app.db.models import Base, Clinic, Profession, User, user_clinics, user_professions, ServiceCategories
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -34,6 +34,11 @@ def load_data():
                 db.execute(user_professions.insert().values(user_id=user.id, profession_id=pid))
             for cid in clinics:
                 db.execute(user_clinics.insert().values(user_id=user.id, clinic_id=cid))
+
+    with open("../data/service_categories.json") as f:
+        service_categories = json.load(f)
+        for item in service_categories:
+            db.add(ServiceCategories(**item))
 
     db.commit()
     db.close()

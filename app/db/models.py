@@ -46,3 +46,8 @@ class User(Base):
 
     clinics = relationship("Clinic", secondary=user_clinics, backref="users")
     professions = relationship("Profession", secondary=user_professions, backref="users")
+
+class ServiceCategories(Base):
+    __tablename__ = "service_categories"
+    id = Column(Integer, primary_key=True)
+    title = Column(String)

@@ -12,6 +12,6 @@ def get_db():
     finally:
         db.close()
 
-@router.get("/getProfessions")
-def get_professions(db: Session = Depends(get_db)):
-    return crud.get_all_professions(db)
+@router.get("/getServiceCategories")
+def get_clinics(db: Session = Depends(get_db)):
+    return crud.get_all_service_categories(db)

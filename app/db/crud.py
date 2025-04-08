@@ -1,6 +1,6 @@
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from .models import Clinic, Profession, User
+from .models import Clinic, Profession, User, ServiceCategories
 
 def get_all_clinics(db: Session):
     return db.query(Clinic).all()
@@ -24,3 +24,6 @@ def get_all_users(
         query = query.filter(User.professions.any(Profession.id == profession_id))
 
     return query.all()
+
+def get_all_service_categories(db: Session):
+    return db.query(ServiceCategories).all()
