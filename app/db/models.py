@@ -60,11 +60,21 @@ class ServiceCategories(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String)
 
+service_service_categories = Table(
+    "service_service_categories",
+    Base.metadata,
+    Column("service_id", Integer, ForeignKey("services.id")),
+    Column("category_id", Integer, ForeignKey("service_categories.id"))
+)
+
 class Service(Base):
     __tablename__ = "services"
     id = Column(Integer, primary_key=True)
     title = Column(String)
     price = Column(Integer)
     duration = Column(Integer)
+    profession_id = Column(Integer)
     short_desc = Column(String)
     full_desc = Column(String)
+
+    category_ids = relationship("ServiceCategories", secondary=service_service_categories, backref="services")

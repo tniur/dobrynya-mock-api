@@ -34,10 +34,16 @@ def get_all_service_categories(db: Session):
 def get_filtered_services(
     db: Session,
     service_ids: Optional[List[int]] = None,
+    profession_id: Optional[int] = None,
+    category_ids: Optional[List[int]] = None,
 ):
     query = db.query(Service)
 
     if service_ids:
         query = query.filter(Service.id.in_(service_ids))
+    if profession_id:
+        query = query.filter(Service.profession_id == profession_id)
+    if category_ids:
+        query = query.join(Service.category_ids).filter(ServiceCategories.id.in_(category_ids))
 
     return query.all()
