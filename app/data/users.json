@@ -9,7 +9,8 @@
     "phone": "+79991234567",
     "email": "ivanov@example.com",
     "profession": [1],
-    "clinic": [1, 2]
+    "clinic": [1, 2],
+    "service": [3]
   },
   {
     "id": 2,
@@ -21,6 +22,7 @@
     "phone": "+79997654321",
     "email": "petrova@example.com",
     "profession": [2],
-    "clinic": [1]
+    "clinic": [1],
+    "service": [4,5]
   }
 ]

@@ -8,11 +8,12 @@ def get_all_clinics(db: Session):
 def get_all_professions(db: Session):
     return db.query(Profession).all()
 
-def get_all_users(
+def get_filtered_users(
     db: Session,
     user_ids: Optional[List[int]] = None,
     clinic_id: Optional[int] = None,
     profession_id: Optional[int] = None,
+    service_ids: Optional[List[int]] = None,
 ):
     query = db.query(User)
 
@@ -22,6 +23,8 @@ def get_all_users(
         query = query.filter(User.clinics.any(Clinic.id == clinic_id))
     if profession_id:
         query = query.filter(User.professions.any(Profession.id == profession_id))
+    if service_ids:
+        query = query.join(User.services).filter(Service.id.in_(service_ids))
 
     return query.all()
 

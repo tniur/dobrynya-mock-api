@@ -19,6 +19,13 @@ class Profession(Base):
     doctor_name = Column(String)
     is_deleted = Column(Boolean, default=False)
 
+user_services = Table(
+    "user_services",
+    Base.metadata,
+    Column("user_id", Integer, ForeignKey("users.id")),
+    Column("service_id", Integer, ForeignKey("services.id"))
+)
+
 user_clinics = Table(
     "user_clinics",
     Base.metadata,
@@ -46,6 +53,7 @@ class User(Base):
 
     clinics = relationship("Clinic", secondary=user_clinics, backref="users")
     professions = relationship("Profession", secondary=user_professions, backref="users")
+    services = relationship("Service", secondary=user_services, backref="users")
 
 class ServiceCategories(Base):
     __tablename__ = "service_categories"
