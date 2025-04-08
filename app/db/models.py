@@ -51,3 +51,12 @@ class ServiceCategories(Base):
     __tablename__ = "service_categories"
     id = Column(Integer, primary_key=True)
     title = Column(String)
+
+class Service(Base):
+    __tablename__ = "services"
+    id = Column(Integer, primary_key=True)
+    title = Column(String)
+    price = Column(Integer)
+    duration = Column(Integer)
+    short_desc = Column(String)
+    full_desc = Column(String)
