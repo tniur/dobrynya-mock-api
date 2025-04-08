@@ -32,6 +32,9 @@ source venv/bin/activate
 pip install -r app/requirements.txt
 ```
 
+## 🗄️ База данных
+Запустите init_data.py для создания базы данных
+
 ## 🚀 Запуск сервера
 ```bash
 uvicorn app.main:app --reload

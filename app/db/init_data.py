@@ -1,8 +1,12 @@
 import json
 from app.db.models import Base, Clinic, Profession, User, user_clinics, user_professions
-from app.db.database import engine, SessionLocal
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 def load_data():
+    engine = create_engine("sqlite:///./db.sqlite3", connect_args={"check_same_thread": False})
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
     Base.metadata.create_all(bind=engine)
     db = SessionLocal()
 
