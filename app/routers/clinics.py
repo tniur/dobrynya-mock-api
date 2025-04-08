@@ -1,12 +1,17 @@
-from fastapi import APIRouter
-from app.models.clinic import Clinic
-import json
-from pathlib import Path
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from app.db.database import SessionLocal
+from app.db import crud
 
 router = APIRouter()
 
-@router.get("/", response_model=list[Clinic])
-def get_clinics():
-    with open(Path("app/data/clinics.json"), "r", encoding="utf-8") as f:
-        clinics = json.load(f)
-    return clinics
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+@router.get("/getClinics")
+def get_clinics(db: Session = Depends(get_db)):
+    return crud.get_all_clinics(db)

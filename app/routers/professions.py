@@ -1,13 +1,17 @@
-from fastapi import APIRouter
-from app.models.profession import Profession
-import json
-from pathlib import Path
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from app.db.database import SessionLocal
+from app.db import crud
 
 router = APIRouter()
 
-@router.get("/", response_model=list[Profession])
-def get_professions():
-    professions_path = Path(__file__).resolve().parent.parent / "data" / "professions.json"
-    with open(professions_path, "r", encoding="utf-8") as f:
-        professions = json.load(f)
-    return professions
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+@router.get("/getProfessions")
+def get_clinics(db: Session = Depends(get_db)):
+    return crud.get_all_professions(db)
