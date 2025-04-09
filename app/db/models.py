@@ -115,13 +115,14 @@ class PatientDocument(Base):
     __tablename__ = "patient_documents"
     id = Column(Integer, primary_key=True)
     patient_id = Column(Integer, ForeignKey("patients.id"))
-    doctor_id = Column(Integer, ForeignKey("users.id"))
     title = Column(String)
+    doctor_id = Column(Integer, ForeignKey("users.id"))
+    clinic_id = Column(Integer, ForeignKey("clinics.id"))
     symptoms = Column(String)
     diagnosis = Column(String)
     conclusion = Column(String)
     recommendations = Column(String)
-    is_temp = Column(Boolean)
+    is_temp = Column(Boolean, default=False)
     date_return = Column(String)
-
+    pdf_path = Column(String)
 

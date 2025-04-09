@@ -54,4 +54,9 @@ def get_lab_results_by_patient(db: Session, patient_id: int):
 def get_patient_documents(db: Session, patient_id: int):
     return db.query(PatientDocument).filter(PatientDocument.patient_id == patient_id).all()
 
+def get_patient_document_detail(db: Session, patient_id: int, document_id: int):
+    return db.query(PatientDocument).filter(
+        PatientDocument.patient_id == patient_id,
+        PatientDocument.id == document_id
+    ).first()
 

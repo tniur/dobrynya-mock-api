@@ -3,36 +3,42 @@
     "id": 1,
     "patient_id": 1,
     "doctor_id": 1,
+    "clinic_id": 1,
     "title": "Первичный прием",
     "symptoms": "Головная боль, усталость",
     "diagnosis": "Мигрень",
     "conclusion": "Пока не подтверждено",
     "recommendations": "Пить больше воды, отдых",
     "is_temp": true,
-    "date_return": "2025-04-15"
+    "date_return": "2025-04-15",
+    "pdf_path": "app/data/mock_pdfs/file4.pdf"
   },
   {
     "id": 2,
     "patient_id": 1,
     "doctor_id": 2,
+    "clinic_id": 2,
     "title": "Повторный прием",
     "symptoms": "Головная боль",
     "diagnosis": "Мигрень",
     "conclusion": "Мигрень подтверждена",
     "recommendations": "Обратиться к неврологу",
     "is_temp": false,
-    "date_return": "2025-04-22"
+    "date_return": "2025-04-22",
+    "pdf_path": "app/data/mock_pdfs/file1.pdf"
   },
   {
     "id": 3,
     "patient_id": 2,
     "doctor_id": 4,
+    "clinic_id": 3,
     "title": "Осмотр перед поездкой",
     "symptoms": "Отсутствуют",
     "diagnosis": "Здоров",
     "conclusion": "Годен к поездке",
     "recommendations": "Продолжать наблюдение",
     "is_temp": false,
-    "date_return": "2025-05-01"
+    "date_return": "2025-05-01",
+    "pdf_path": "app/data/mock_pdfs/file2.pdf"
   }
 ]
