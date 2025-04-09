@@ -96,3 +96,12 @@ class PatientKey(Base):
     key = Column(String, unique=True)
 
     patient = relationship("Patient", backref="keys")
+
+class PatientLabResult(Base):
+    __tablename__ = "patient_lab_results"
+
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(Integer, ForeignKey("patients.id"))
+    date_created = Column(String)
+    clinic_id = Column(Integer)
+    files_count = Column(Integer)

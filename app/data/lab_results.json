@@ -1,0 +1,32 @@
+[
+    {
+        "patient_id": 1,
+        "date_created": "2024-12-01",
+        "clinic_id": 1,
+        "files_count": 1
+    },
+    {
+        "patient_id": 1,
+        "date_created": "2024-12-20",
+        "clinic_id": 2,
+        "files_count": 1
+    },
+    {
+        "patient_id": 2,
+        "date_created": "2025-01-15",
+        "clinic_id": 2,
+        "files_count": 2
+    },
+    {
+        "patient_id": 2,
+        "date_created": "2025-02-10",
+        "clinic_id": 1,
+        "files_count": 1
+    },
+    {
+        "patient_id": 2,
+        "date_created": "2025-02-15",
+        "clinic_id": 3,
+        "files_count": 1
+    }
+]

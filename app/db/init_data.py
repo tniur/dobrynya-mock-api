@@ -1,7 +1,11 @@
 import json
-from app.db.models import Base, Clinic, Profession, User, user_clinics, user_professions, user_services, ServiceCategories, Service, service_service_categories, Patient, PatientKey
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from app.db.models import (
+    Base, Clinic, Profession, User, Patient, PatientKey, PatientLabResult,
+    Service, ServiceCategories, user_clinics, user_professions, user_services,
+    service_service_categories
+)
 
 def load_data():
     engine = create_engine("sqlite:///./db.sqlite3", connect_args={"check_same_thread": False})
@@ -64,6 +68,11 @@ def load_data():
         keys = json.load(f)
         for item in keys:
             db.add(PatientKey(**item))
+
+    with open("../data/lab_results.json") as f:
+        lab_results = json.load(f)
+        for item in lab_results:
+            db.add(PatientLabResult(**item))
 
     db.commit()
     db.close()
