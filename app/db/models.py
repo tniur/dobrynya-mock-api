@@ -17,7 +17,6 @@ class Profession(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     doctor_name = Column(String)
-    is_deleted = Column(Boolean, default=False)
 
 user_services = Table(
     "user_services",

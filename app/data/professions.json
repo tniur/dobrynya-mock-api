@@ -2,121 +2,101 @@
   {
     "id": 1,
     "name": "Терапевт",
-    "doctor_name": "Врач-терапевт",
-    "is_deleted": false
+    "doctor_name": "Врач-терапевт"
   },
   {
     "id": 2,
     "name": "Кардиолог",
-    "doctor_name": "Врач-кардиолог",
-    "is_deleted": false
+    "doctor_name": "Врач-кардиолог"
   },
   {
     "id": 3,
     "name": "Стоматолог",
-    "doctor_name": "Врач-стоматолог",
-    "is_deleted": false
+    "doctor_name": "Врач-стоматолог"
   },
   {
     "id": 4,
     "name": "Невролог",
-    "doctor_name": "Врач-невролог",
-    "is_deleted": false
+    "doctor_name": "Врач-невролог"
   },
   {
     "id": 5,
     "name": "Офтальмолог",
-    "doctor_name": "Врач-офтальмолог",
-    "is_deleted": false
+    "doctor_name": "Врач-офтальмолог"
   },
   {
     "id": 6,
     "name": "Хирург",
-    "doctor_name": "Врач-хирург",
-    "is_deleted": false
+    "doctor_name": "Врач-хирург"
   },
   {
     "id": 7,
     "name": "Оториноларинголог",
-    "doctor_name": "Врач-ЛОР",
-    "is_deleted": false
+    "doctor_name": "Врач-ЛОР"
   },
   {
     "id": 8,
     "name": "Гинеколог",
-    "doctor_name": "Врач-гинеколог",
-    "is_deleted": false
+    "doctor_name": "Врач-гинеколог"
   },
   {
     "id": 9,
     "name": "Уролог",
-    "doctor_name": "Врач-уролог",
-    "is_deleted": false
+    "doctor_name": "Врач-уролог"
   },
   {
     "id": 10,
     "name": "Дерматолог",
-    "doctor_name": "Врач-дерматолог",
-    "is_deleted": true
+    "doctor_name": "Врач-дерматолог"
   },
   {
     "id": 11,
     "name": "Эндокринолог",
-    "doctor_name": "Врач-эндокринолог",
-    "is_deleted": false
+    "doctor_name": "Врач-эндокринолог"
   },
   {
     "id": 12,
     "name": "Гастроэнтеролог",
-    "doctor_name": "Врач-гастроэнтеролог",
-    "is_deleted": false
+    "doctor_name": "Врач-гастроэнтеролог"
   },
   {
     "id": 13,
     "name": "Педиатр",
-    "doctor_name": "Врач-педиатр",
-    "is_deleted": false
+    "doctor_name": "Врач-педиатр"
   },
   {
     "id": 14,
     "name": "Психиатр",
-    "doctor_name": "Врач-психиатр",
-    "is_deleted": false
+    "doctor_name": "Врач-психиатр"
   },
   {
     "id": 15,
     "name": "Онколог",
-    "doctor_name": "Врач-онколог",
-    "is_deleted": false
+    "doctor_name": "Врач-онколог"
   },
   {
     "id": 16,
     "name": "Ревматолог",
-    "doctor_name": "Врач-ревматолог",
-    "is_deleted": true
+    "doctor_name": "Врач-ревматолог"
   },
   {
     "id": 17,
     "name": "Аллерголог",
-    "doctor_name": "Врач-аллерголог",
-    "is_deleted": false
+    "doctor_name": "Врач-аллерголог"
   },
   {
     "id": 18,
     "name": "Инфекционист",
-    "doctor_name": "Врач-инфекционист",
-    "is_deleted": false
+    "doctor_name": "Врач-инфекционист"
   },
   {
     "id": 19,
     "name": "Нефролог",
-    "doctor_name": "Врач-нефролог",
-    "is_deleted": true
+    "doctor_name": "Врач-нефролог"
   },
   {
     "id": 20,
     "name": "Пульмонолог",
-    "doctor_name": "Врач-пульмонолог",
-    "is_deleted": true
+    "doctor_name": "Врач-пульмонолог"
   }
 ]
