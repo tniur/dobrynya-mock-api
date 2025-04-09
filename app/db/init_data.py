@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from app.db.models import (
     Base, Clinic, Profession, User, Patient, PatientKey, PatientLabResult,
     Service, ServiceCategories, user_clinics, user_professions, user_services,
-    service_service_categories
+    service_service_categories, PatientLabResultDetail
 )
 
 def load_data():
@@ -73,6 +73,11 @@ def load_data():
         lab_results = json.load(f)
         for item in lab_results:
             db.add(PatientLabResult(**item))
+
+    with open("../data/patient_lab_result_details.json") as f:
+        details = json.load(f)
+        for item in details:
+            db.add(PatientLabResultDetail(**item))
 
     db.commit()
     db.close()

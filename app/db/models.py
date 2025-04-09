@@ -105,3 +105,10 @@ class PatientLabResult(Base):
     date_created = Column(String)
     clinic_id = Column(Integer)
     files_count = Column(Integer)
+
+class PatientLabResultDetail(Base):
+    __tablename__ = "patient_lab_result_details"
+    id = Column(Integer, primary_key=True)
+    result_id = Column(Integer, ForeignKey("patient_lab_results.id"))
+    file_path = Column(String)
+
