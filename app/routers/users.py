@@ -1,17 +1,10 @@
 from fastapi import APIRouter, Depends
 from typing import Optional
 from sqlalchemy.orm import Session
-from app.db.database import SessionLocal
+from app.db.database import get_db
 from app.db.crud import get_filtered_users
 
 router = APIRouter()
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
 
 @router.get("/getUsers")
 def get_users(
