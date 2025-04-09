@@ -77,3 +77,22 @@ class Service(Base):
     full_desc = Column(String)
 
     category_ids = relationship("ServiceCategories", secondary=service_service_categories, backref="services")
+
+class Patient(Base):
+    __tablename__ = "patients"
+    id = Column(Integer, primary_key=True)
+    last_name = Column(String)
+    first_name = Column(String)
+    third_name = Column(String)
+    birth_date = Column(String)
+    gender = Column(String)
+    mobile = Column(String)
+    email = Column(String)
+
+class PatientKey(Base):
+    __tablename__ = "patient_keys"
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(Integer, ForeignKey("patients.id"))
+    key = Column(String, unique=True)
+
+    patient = relationship("Patient", backref="keys")

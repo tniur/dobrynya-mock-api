@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "last_name": "Смирнов",
+    "first_name": "Алексей",
+    "third_name": "Игоревич",
+    "birth_date": "1990-03-12",
+    "gender": "male",
+    "mobile": "+79991234567",
+    "email": "smirnov@example.com"
+  },
+  {
+    "id": 2,
+    "last_name": "Иванова",
+    "first_name": "Екатерина",
+    "third_name": "Сергеевна",
+    "birth_date": "1987-06-25",
+    "gender": "female",
+    "mobile": "+79999876543",
+    "email": "ivanova@example.com"
+  }
+]

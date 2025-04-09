@@ -1,0 +1,10 @@
+[
+  {
+    "patient_id": 1,
+    "key": "abc123"
+  },
+  {
+    "patient_id": 2,
+    "key": "xyz789"
+  }
+]
