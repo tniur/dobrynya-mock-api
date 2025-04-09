@@ -99,7 +99,6 @@ class PatientKey(Base):
 
 class PatientLabResult(Base):
     __tablename__ = "patient_lab_results"
-
     id = Column(Integer, primary_key=True)
     patient_id = Column(Integer, ForeignKey("patients.id"))
     date_created = Column(String)
@@ -111,4 +110,18 @@ class PatientLabResultDetail(Base):
     id = Column(Integer, primary_key=True)
     result_id = Column(Integer, ForeignKey("patient_lab_results.id"))
     file_path = Column(String)
+
+class PatientDocument(Base):
+    __tablename__ = "patient_documents"
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(Integer, ForeignKey("patients.id"))
+    doctor_id = Column(Integer, ForeignKey("users.id"))
+    title = Column(String)
+    symptoms = Column(String)
+    diagnosis = Column(String)
+    conclusion = Column(String)
+    recommendations = Column(String)
+    is_temp = Column(Boolean)
+    date_return = Column(String)
+
 
