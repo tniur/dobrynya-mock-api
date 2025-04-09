@@ -1,6 +1,7 @@
 from typing import List, Optional
 from sqlalchemy.orm import Session
-from .models import (Clinic, Profession, User, ServiceCategories, Service, PatientLabResult, PatientDocument)
+from .models import (Clinic, Profession, User, ServiceCategories, Service, PatientLabResult, PatientDocument,
+                     PatientConsultation)
 
 def get_all_clinics(db: Session):
     return db.query(Clinic).all()
@@ -60,3 +61,8 @@ def get_patient_document_detail(db: Session, patient_id: int, document_id: int):
         PatientDocument.id == document_id
     ).first()
 
+def get_consultations_by_patient(db: Session, patient_id: int, status: str | None = None):
+    query = db.query(PatientConsultation).filter(PatientConsultation.patient_id == patient_id)
+    if status:
+        query = query.filter(PatientConsultation.status == status)
+    return query.all()

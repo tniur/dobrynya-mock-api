@@ -126,3 +126,10 @@ class PatientDocument(Base):
     date_return = Column(String)
     pdf_path = Column(String)
 
+class PatientConsultation(Base):
+    __tablename__ = "patient_consultations"
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(Integer)
+    title = Column(String)
+    doctor_id = Column(Integer, ForeignKey("users.id"))
+    status = Column(String)  # "waiting", "active", "done"

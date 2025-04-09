@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "patient_id": 1,
+        "title": "Первичная консультация",
+        "doctor_id": 1,
+        "status": "done"
+    },
+    {
+        "id": 2,
+        "patient_id": 1,
+        "title": "Повторный осмотр",
+        "doctor_id": 1,
+        "status": "waiting"
+    },
+    {
+        "id": 3,
+        "patient_id": 2,
+        "title": "Консультация специалиста",
+        "doctor_id": 2,
+        "status": "active"
+    }
+]
