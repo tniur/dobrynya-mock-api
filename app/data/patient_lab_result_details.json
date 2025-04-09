@@ -1,26 +1,26 @@
 [
     {
         "result_id": 1,
-        "file_path": "app/data/patient_results_pdfs/result1_file1.pdf"
+        "file_path": "app/data/mock_pdfs/file1.pdf"
     },
     {
         "result_id": 2,
-        "file_path": "app/data/patient_results_pdfs/result2_file1.pdf"
+        "file_path": "app/data/mock_pdfs/file2.pdf"
     },
     {
         "result_id": 3,
-        "file_path": "app/data/patient_results_pdfs/result3_file1.pdf"
+        "file_path": "app/data/mock_pdfs/file3.pdf"
     },
     {
         "result_id": 3,
-        "file_path": "app/data/patient_results_pdfs/result3_file2.pdf"
+        "file_path": "app/data/mock_pdfs/file4.pdf"
     },
     {
         "result_id": 4,
-        "file_path": "app/data/patient_results_pdfs/result4_file1.pdf"
+        "file_path": "app/data/mock_pdfs/file5.pdf"
     },
     {
         "result_id": 5,
-        "file_path": "app/data/patient_results_pdfs/result5_file1.pdf"
+        "file_path": "app/data/mock_pdfs/file6.pdf"
     }
 ]
