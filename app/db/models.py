@@ -102,7 +102,7 @@ class PatientLabResult(Base):
     id = Column(Integer, primary_key=True)
     patient_id = Column(Integer, ForeignKey("patients.id"))
     date_created = Column(String)
-    clinic_id = Column(Integer)
+    clinic_id = Column(Integer, ForeignKey("clinics.id"))
     files_count = Column(Integer)
 
 class PatientLabResultDetail(Base):
@@ -129,7 +129,8 @@ class PatientDocument(Base):
 class PatientConsultation(Base):
     __tablename__ = "patient_consultations"
     id = Column(Integer, primary_key=True)
-    patient_id = Column(Integer)
+    patient_id = Column(Integer, ForeignKey("patients.id"))
     title = Column(String)
     doctor_id = Column(Integer, ForeignKey("users.id"))
     status = Column(String)  # "waiting", "active", "done"
+    desc = Column(String)

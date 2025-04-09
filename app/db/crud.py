@@ -66,3 +66,9 @@ def get_consultations_by_patient(db: Session, patient_id: int, status: str | Non
     if status:
         query = query.filter(PatientConsultation.status == status)
     return query.all()
+
+def get_consultation_detail(db: Session, patient_id: int, consultation_id: int):
+    return db.query(PatientConsultation).filter(
+        PatientConsultation.id == consultation_id,
+        PatientConsultation.patient_id == patient_id
+    ).first()
