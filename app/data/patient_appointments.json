@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "patient_id": 1,
+    "date": "2025-04-05",
+    "time": "12:00 - 12:30",
+    "time_start": "2025-04-05 12:00",
+    "time_end": "2025-04-05 12:30",
+    "clinic_id": 1,
+    "doctor_id": 1,
+    "created": "2025-04-01",
+    "status": "completed"
+  },
+  {
+    "id": 2,
+    "patient_id": 1,
+    "date": "2025-04-10",
+    "time": "10:00 - 10:30",
+    "time_start": "2025-04-10 10:00",
+    "time_end": "2025-04-10 10:30",
+    "clinic_id": 2,
+    "doctor_id": 2,
+    "created": "2025-04-02",
+    "status": "upcoming"
+  },
+  {
+    "id": 3,
+    "patient_id": 2,
+    "date": "2025-04-03",
+    "time": "14:00 - 14:30",
+    "time_start": "2025-04-03 14:00",
+    "time_end": "2025-04-03 14:30",
+    "clinic_id": 1,
+    "doctor_id": 1,
+    "created": "2025-03-30",
+    "status": "refused"
+  }
+]

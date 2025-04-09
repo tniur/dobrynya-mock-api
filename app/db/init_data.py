@@ -5,7 +5,7 @@ from app.db.models import (
     Base, Clinic, Profession, User, Patient, PatientKey, PatientLabResult,
     Service, ServiceCategories, user_clinics, user_professions, user_services,
     service_service_categories, PatientLabResultDetail, PatientDocument,
-    PatientConsultation
+    PatientConsultation, PatientAppointment
 )
 
 def load_data():
@@ -89,6 +89,11 @@ def load_data():
         consultations = json.load(f)
         for item in consultations:
             db.add(PatientConsultation(**item))
+
+    with open("../data/patient_appointments.json") as f:
+        appointments = json.load(f)
+        for item in appointments:
+            db.add(PatientAppointment(**item))
 
     db.commit()
     db.close()

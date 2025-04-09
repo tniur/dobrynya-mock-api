@@ -134,3 +134,16 @@ class PatientConsultation(Base):
     doctor_id = Column(Integer, ForeignKey("users.id"))
     status = Column(String)  # "waiting", "active", "done"
     desc = Column(String)
+
+class PatientAppointment(Base):
+    __tablename__ = "patient_appointments"
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(Integer, ForeignKey("patients.id"))
+    date = Column(String)  # Формат: "2025-04-07"
+    time = Column(String)  # Формат: "12:00 - 12:30"
+    time_start = Column(String)  # Формат: "2025-04-07 12:00"
+    time_end = Column(String)    # Формат: "2025-04-07 12:30"
+    clinic_id = Column(Integer, ForeignKey("clinics.id"))
+    doctor_id = Column(Integer, ForeignKey("users.id"))
+    created = Column(String)  # Дата создания записи
+    status = Column(String)   # "upcoming", "completed", "refused"

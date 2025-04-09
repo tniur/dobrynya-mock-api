@@ -1,7 +1,7 @@
 from typing import List, Optional
 from sqlalchemy.orm import Session
 from .models import (Clinic, Profession, User, ServiceCategories, Service, PatientLabResult, PatientDocument,
-                     PatientConsultation)
+                     PatientConsultation, PatientAppointment)
 
 def get_all_clinics(db: Session):
     return db.query(Clinic).all()
@@ -72,3 +72,7 @@ def get_consultation_detail(db: Session, patient_id: int, consultation_id: int):
         PatientConsultation.id == consultation_id,
         PatientConsultation.patient_id == patient_id
     ).first()
+
+def get_appointments_by_patient(db: Session, patient_id: int):
+    return db.query(PatientAppointment).filter(PatientAppointment.patient_id == patient_id).all()
+
