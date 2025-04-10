@@ -10,7 +10,7 @@ from app.db.models import (
 )
 
 def load_data():
-    engine = create_engine("sqlite:///./db.sqlite3", connect_args={"check_same_thread": False})
+    engine = create_engine("sqlite:///./app/db/db.sqlite3", connect_args={"check_same_thread": False})
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
     Base.metadata.create_all(bind=engine)
