@@ -1,101 +1,39 @@
-# Dobrynya Mock API
+# DobrynyaNN Mock API
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/Framework-FastAPI-green)](https://fastapi.tiangolo.com)
 [![Uvicorn](https://img.shields.io/badge/Server-Uvicorn-ff69b4)](https://www.uvicorn.org)
+[![Docker](https://img.shields.io/badge/Docker-Supported-blue)](https://www.docker.com/)
 
-Mock API сервис для тестирования и разработки приложения DobrynyaNN
+Mock API сервис для тестирования и разработки приложения **DobrynyaNN**
 
-## ⚙️ Установка
+## 📦 Требования
+- [Docker](https://www.docker.com/) установлен и запущен
+- [Docker Compose](https://docs.docker.com/compose/) (обычно уже входит в Docker Desktop)
 
-### 1. Клонируйте репозиторий
+
+## 🔧 Установка и запуск
+
+### 1. Клонируйте репозиторий:
+
 ```bash
 git clone https://github.com/tniur/dobrynya-mock-api.git
 cd dobrynya-mock-api
 ```
-### 2. Создайте и активируйте виртуальное окружение
 
-#### Windows
+## 2. Запустите сервер:
 ```bash
-python -m venv venv
-venv\Scripts\activate
+docker-compose up --build
 ```
 
-#### Linux/macOS
+## 3. Сервер доступен по адресу:
+- http://127.0.0.1:8000
+
+### 📚 Документация API
+- Swagger UI: http://127.0.0.1:8000/docs
+- ReDoc: http://127.0.0.1:8000/redoc
+
+## 4. Остановить сервер:
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+docker-compose down
 ```
-
-### 3. Установите зависимости
-```bash# Dobrynya Mock API
-
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/Framework-FastAPI-green)](https://fastapi.tiangolo.com)
-[![Uvicorn](https://img.shields.io/badge/Server-Uvicorn-ff69b4)](https://www.uvicorn.org)
-
-Mock API сервис для тестирования и разработки приложения DobrynyaNN
-
-## ⚙️ Установка
-
-### 1. Клонируйте репозиторий
-```bash
-git clone https://github.com/tniur/dobrynya-mock-api.git
-cd dobrynya-mock-api
-```
-### 2. Создайте и активируйте виртуальное окружение
-
-#### Windows
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-#### Linux/macOS
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Установите зависимости
-```bash
-pip install -r app/requirements.txt
-```
-
-## 🗄️ База данных
-Запустите init_data.py для создания базы данных
-
-## 🚀 Запуск сервера
-```bash
-uvicorn app.main:app --reload
-```
-
-Cервер будет доступен по адресу: http://127.0.0.1:8000
-
-## 📚 Документация API
-- Swagger UI: /docs
-- ReDoc: /redoc
-
-## ⚠️ Требования
-- Python 3.8+
-- pip 20+
-pip install -r app/requirements.txt
-```
-
-## 🗄️ База данных
-Запустите init_data.py для создания базы данных
-
-## 🚀 Запуск сервера
-```bash
-uvicorn app.main:app --reload
-```
-
-Cервер будет доступен по адресу: http://127.0.0.1:8000
-
-## 📚 Документация API
-- Swagger UI: /docs
-- ReDoc: /redoc
-
-## ⚠️ Требования
-- Python 3.8+
-- pip 20+
