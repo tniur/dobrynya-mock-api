@@ -2,7 +2,7 @@
   {
     "id": 1,
     "patient_id": 1,
-    "doctor_id": 1,
+    "doctor_id": 22,
     "clinic_id": 1,
     "title": "Первичный прием",
     "symptoms": "Головная боль, усталость",
@@ -16,7 +16,7 @@
   {
     "id": 2,
     "patient_id": 1,
-    "doctor_id": 2,
+    "doctor_id": 22,
     "clinic_id": 2,
     "title": "Повторный прием",
     "symptoms": "Головная боль",
@@ -30,7 +30,7 @@
   {
     "id": 3,
     "patient_id": 2,
-    "doctor_id": 4,
+    "doctor_id": 2,
     "clinic_id": 3,
     "title": "Осмотр перед поездкой",
     "symptoms": "Отсутствуют",

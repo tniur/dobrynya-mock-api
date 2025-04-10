@@ -19,7 +19,7 @@
     "time_start": "2025-04-10 10:00",
     "time_end": "2025-04-10 10:30",
     "clinic_id": 2,
-    "doctor_id": 2,
+    "doctor_id": 7,
     "created": "2025-04-02",
     "status": "upcoming"
   },
@@ -31,7 +31,7 @@
     "time_start": "2025-04-03 14:00",
     "time_end": "2025-04-03 14:30",
     "clinic_id": 1,
-    "doctor_id": 1,
+    "doctor_id": 14,
     "created": "2025-03-30",
     "status": "refused"
   }
