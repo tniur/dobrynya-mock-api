@@ -6,7 +6,7 @@ from app.db.models import (
     Base, Clinic, Profession, User, Patient, PatientKey, PatientLabResult,
     Service, ServiceCategories, user_clinics, user_professions, user_services,
     service_service_categories, PatientLabResultDetail, PatientDocument,
-    PatientConsultation, PatientAppointment
+    PatientConsultation, PatientAppointment, Schedule
 )
 
 def load_data():
@@ -28,6 +28,7 @@ def load_data():
     patient_documents_path = Path(__file__).parent / 'data' / 'patient_documents.json'
     patient_consultations_path = Path(__file__).parent / 'data' / 'patient_consultations.json'
     patient_appointments_path = Path(__file__).parent / 'data' / 'patient_appointments.json'
+    schedules_path = Path(__file__).parent / 'data' / 'schedules.json'
 
     with open(clinics_path) as f:
         clinics = json.load(f)
@@ -108,6 +109,11 @@ def load_data():
         appointments = json.load(f)
         for item in appointments:
             db.add(PatientAppointment(**item))
+
+    with open(schedules_path) as f:
+        schedules = json.load(f)
+        for item in schedules:
+            db.add(Schedule(**item))
 
     db.commit()
     db.close()

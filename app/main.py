@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from app.routers import (
     clinics, professions, users, service_categories, services, patients, patient_lab_results,
     patients_lab_results_details, patient_documents, patient_document_details, patient_consultations,
-    patient_consultation_details, patient_appointments, create_patient_appointments, cancel_patient_appointment
+    patient_consultation_details, patient_appointments, create_patient_appointments, cancel_patient_appointment,
+    user_schedule
 )
 
 app = FastAPI(title="Mock DobrynyaNN API")
@@ -22,3 +23,4 @@ app.include_router(patient_consultation_details.router, tags=["Patient Consultat
 app.include_router(patient_appointments.router, tags=["Patient Appointments"])
 app.include_router(create_patient_appointments.router, tags=["Create Patient Appointments"])
 app.include_router(cancel_patient_appointment.router, tags=["Cancel Patient Appointments"])
+app.include_router(user_schedule.router, tags=["User Schedule"])

@@ -147,3 +147,15 @@ class PatientAppointment(Base):
     doctor_id = Column(Integer, ForeignKey("users.id"))
     created = Column(String)  # Дата создания записи
     status = Column(String)   # "upcoming", "completed", "refused"
+
+class Schedule(Base):
+    __tablename__ = "schedules"
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('users.id'))
+    clinic_id = Column(Integer, ForeignKey('clinics.id'))
+    date = Column(String)  # Формат: "2025-04-07"
+    time = Column(String)  # Формат: "12:00 - 12:30"
+    time_start = Column(String)  # Формат: "2025-04-07 12:00"
+    time_end = Column(String)  # Формат: "2025-04-07 12:30"
+    room = Column(String)
+    is_busy = Column(Boolean, default=False)

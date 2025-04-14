@@ -1,7 +1,7 @@
 from typing import List, Optional
 from sqlalchemy.orm import Session
 from .models import (Clinic, Profession, User, ServiceCategories, Service, PatientLabResult, PatientDocument,
-                     PatientConsultation, PatientAppointment)
+                     PatientConsultation, PatientAppointment, Schedule)
 
 def get_all_clinics(db: Session):
     return db.query(Clinic).all()
@@ -114,3 +114,16 @@ def cancel_appointment(db: Session, appointment_id: int):
     db.commit()
     db.refresh(appointment)
     return appointment
+
+
+def get_user_schedule(
+        db: Session,
+        user_id: int,
+        clinic_id: int,
+):
+    query = db.query(Schedule).filter(
+        Schedule.user_id == user_id,
+        Schedule.clinic_id == clinic_id
+    )
+
+    return query.order_by(Schedule.date, Schedule.time_start).all()
