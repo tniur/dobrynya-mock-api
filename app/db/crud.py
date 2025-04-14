@@ -76,3 +76,31 @@ def get_consultation_detail(db: Session, patient_id: int, consultation_id: int):
 def get_appointments_by_patient(db: Session, patient_id: int):
     return db.query(PatientAppointment).filter(PatientAppointment.patient_id == patient_id).all()
 
+def post_create_appointment(
+    db: Session,
+    patient_id: int,
+    doctor_id: int,
+    clinic_id: int,
+    date: str,
+    time: str,
+    time_start: str,
+    time_end: str,
+    created: str,
+    status: str = "upcoming"
+):
+    new_appointment = PatientAppointment(
+        patient_id=patient_id,
+        doctor_id=doctor_id,
+        clinic_id=clinic_id,
+        date=date,
+        time=time,
+        time_start=time_start,
+        time_end=time_end,
+        created=created,
+        status=status
+    )
+    db.add(new_appointment)
+    db.commit()
+    db.refresh(new_appointment)
+    return new_appointment
+
