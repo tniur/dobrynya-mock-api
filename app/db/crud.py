@@ -104,3 +104,13 @@ def post_create_appointment(
     db.refresh(new_appointment)
     return new_appointment
 
+def cancel_appointment(db: Session, appointment_id: int):
+    appointment = db.query(PatientAppointment).filter(PatientAppointment.id == appointment_id).first()
+    if not appointment:
+        raise ValueError("Appointment not found")
+
+    appointment.status = "refused"
+
+    db.commit()
+    db.refresh(appointment)
+    return appointment
