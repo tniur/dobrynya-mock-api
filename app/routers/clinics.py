@@ -7,4 +7,5 @@ router = APIRouter()
 
 @router.get("/getClinics")
 def get_clinics(db: Session = Depends(get_db)):
-    return crud.get_all_clinics(db)
+    result = crud.get_all_clinics(db)
+    return {"data": result}

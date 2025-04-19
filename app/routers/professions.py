@@ -7,4 +7,5 @@ router = APIRouter()
 
 @router.get("/getProfessions")
 def get_professions(db: Session = Depends(get_db)):
-    return crud.get_all_professions(db)
+    result = crud.get_all_professions(db)
+    return {"data": result}

@@ -36,4 +36,4 @@ def get_services(
             "full_desc": service.full_desc,
         })
 
-    return result
+    return {"data": result}

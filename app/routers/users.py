@@ -41,4 +41,4 @@ def get_users(
             "services": [s.id for s in user.services],
         })
 
-    return {"users": result}
+    return {"data": result}
