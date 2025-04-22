@@ -27,7 +27,7 @@ def get_patient_document_details(
     except FileNotFoundError:
         raise HTTPException(status_code=500, detail="PDF file not found on server")
 
-    return {
+    result = {
         "title": document.title,
         "doctor_id": document.doctor_id,
         "clinic_id": document.clinic_id,
@@ -39,3 +39,4 @@ def get_patient_document_details(
         "date_return": document.date_return,
         "pdf_content": encoded_pdf
     }
+    return {"data": result}

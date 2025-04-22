@@ -13,7 +13,7 @@ def get_user_schedule(
 ):
     schedule = crud.get_user_schedule(db, user_id=user_id, clinic_id=clinic_id)
 
-    return [
+    result = [
         {
             "clinic_id": s.clinic_id,
             "date": s.date,
@@ -26,3 +26,4 @@ def get_user_schedule(
         }
         for s in schedule
     ]
+    return {"data": result}

@@ -20,10 +20,11 @@ def get_patient_consultation_details(
     if not consultation:
         raise HTTPException(status_code=404, detail="Consultation not found")
 
-    return {
+    result = {
         "id": consultation.id,
         "title": consultation.title,
         "doctor_id": consultation.doctor_id,
         "status": consultation.status,
         "desc": consultation.desc
     }
+    return {"data": result}

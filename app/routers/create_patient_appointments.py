@@ -45,8 +45,9 @@ def create_appointment(
         status="upcoming"
     )
 
-    return {
+    result = {
         "success": True,
         "appointment_id": appointment.id,
         "message": "Appointment successfully created"
     }
+    return {"data": result}

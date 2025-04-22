@@ -33,8 +33,9 @@ def get_lab_result_details(patient_key: str, result_id: int, db: Session = Depen
         except FileNotFoundError:
             continue
 
-    return {
+    result = {
         "date_created": result.date_created,
         "clinic_id": result.clinic_id,
         "pdf_files": pdf_files
     }
+    return {"data": result}

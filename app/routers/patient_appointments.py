@@ -14,7 +14,7 @@ def get_patient_appointments(patient_key: str = Query(...), db: Session = Depend
 
     appointments = crud.get_appointments_by_patient(db, patient_key_entry.patient_id)
 
-    return [
+    result = [
         {
             "appointment_id": a.id,
             "date": a.date,
@@ -28,3 +28,4 @@ def get_patient_appointments(patient_key: str = Query(...), db: Session = Depend
         }
         for a in appointments
     ]
+    return {"data": result}
