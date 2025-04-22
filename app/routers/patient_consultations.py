@@ -18,7 +18,7 @@ def get_patient_consultations(
 
     consultations = crud.get_consultations_by_patient(db, patient_key_entry.patient_id, status)
 
-    return [
+    result = [
         {
             "id": consult.id,
             "title": consult.title,
@@ -27,3 +27,4 @@ def get_patient_consultations(
         }
         for consult in consultations
     ]
+    return {"data": result}

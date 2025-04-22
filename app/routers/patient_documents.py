@@ -14,7 +14,7 @@ def get_patient_documents(patient_key: str = Query(...), db: Session = Depends(g
 
     documents = crud.get_patient_documents(db, patient_key_entry.patient_id)
 
-    return [
+    result = [
         {
             "id": doc.id,
             "title": doc.title,
@@ -28,3 +28,4 @@ def get_patient_documents(patient_key: str = Query(...), db: Session = Depends(g
         }
         for doc in documents
     ]
+    return {"data": result}

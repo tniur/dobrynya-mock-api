@@ -18,7 +18,7 @@ def get_patient_info(patient_key: str = Query(...), db: Session = Depends(get_db
         raise HTTPException(status_code=401, detail="Invalid patient_key")
 
     patient = key_entry.patient
-    return {
+    result = {
         "last_name": patient.last_name,
         "first_name": patient.first_name,
         "third_name": patient.third_name,
@@ -28,3 +28,4 @@ def get_patient_info(patient_key: str = Query(...), db: Session = Depends(get_db
         "mobile": patient.mobile,
         "email": patient.email,
     }
+    return {"data": result}

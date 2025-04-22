@@ -14,7 +14,7 @@ def get_patient_lab_results(patient_key: str = Query(...), db: Session = Depends
 
     lab_results = crud.get_lab_results_by_patient(db, patient_key_entry.patient_id)
 
-    return [
+    result = [
         {
             "result_id": result.id,
             "files_count": result.files_count,
@@ -23,3 +23,4 @@ def get_patient_lab_results(patient_key: str = Query(...), db: Session = Depends
         }
         for result in lab_results
     ]
+    return {"data": result}
