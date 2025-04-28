@@ -7,16 +7,18 @@
     "birth_date": "1990-03-12",
     "gender": "male",
     "mobile": "+79991234567",
-    "email": "smirnov@example.com"
+    "email": "smirnov@example.com",
+    "avatar_path": null
   },
   {
     "id": 2,
     "last_name": "Иванова",
     "first_name": "Екатерина",
     "third_name": "Сергеевна",
-    "birth_date": "1987-06-25",
+    "birth_date": "1990-06-25",
     "gender": "female",
     "mobile": "+79999876543",
-    "email": "ivanova@example.com"
+    "email": "ivanova@example.com",
+    "avatar_path": "avatars/avatar1.png"
   }
 ]

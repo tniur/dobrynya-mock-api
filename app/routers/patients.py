@@ -18,6 +18,11 @@ def get_patient_info(patient_key: str = Query(...), db: Session = Depends(get_db
         raise HTTPException(status_code=401, detail="Invalid patient_key")
 
     patient = key_entry.patient
+
+    avatar_url = None
+    if patient.avatar_path:
+        avatar_url = f"http://127.0.0.1:8000/static/{patient.avatar_path}"
+
     result = {
         "last_name": patient.last_name,
         "first_name": patient.first_name,
@@ -27,5 +32,6 @@ def get_patient_info(patient_key: str = Query(...), db: Session = Depends(get_db
         "gender": patient.gender,
         "mobile": patient.mobile,
         "email": patient.email,
+        "avatar_url": avatar_url,
     }
     return {"data": result}

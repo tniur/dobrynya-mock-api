@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+
 from app.routers import (
     clinics, professions, users, service_categories, services, patients, patient_lab_results,
     patients_lab_results_details, patient_documents, patient_document_details, patient_consultations,
@@ -7,6 +9,7 @@ from app.routers import (
 )
 
 app = FastAPI(title="Mock DobrynyaNN API")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 app.include_router(clinics.router, tags=["Clinics"])
 app.include_router(professions.router, tags=["Professions"])
