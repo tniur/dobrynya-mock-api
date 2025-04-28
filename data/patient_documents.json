@@ -11,7 +11,7 @@
     "recommendations": "Пить больше воды, отдых",
     "is_temp": true,
     "date_return": "2025-04-15",
-    "pdf_path": "data/mock_pdfs/file4.pdf"
+    "pdf_path": "data/mock_pdfs/file2.pdf"
   },
   {
     "id": 2,
@@ -53,7 +53,7 @@
     "recommendations": "Физиотерапия, покой",
     "is_temp": true,
     "date_return": "2025-04-30",
-    "pdf_path": "data/mock_pdfs/file5.pdf"
+    "pdf_path": "data/mock_pdfs/file3.pdf"
   },
   {
     "id": 5,
@@ -95,7 +95,7 @@
     "recommendations": "Следующий осмотр через год",
     "is_temp": false,
     "date_return": "2025-06-01",
-    "pdf_path": "data/mock_pdfs/file6.pdf"
+    "pdf_path": "data/mock_pdfs/file3.pdf"
   },
   {
     "id": 8,
@@ -123,7 +123,7 @@
     "recommendations": "Продолжить курс лечения",
     "is_temp": false,
     "date_return": "2025-06-15",
-    "pdf_path": "data/mock_pdfs/file5.pdf"
+    "pdf_path": "data/mock_pdfs/file3.pdf"
   },
   {
     "id": 10,
@@ -152,7 +152,7 @@
     "recommendations": "Покой и сон",
     "is_temp": true,
     "date_return": "2025-05-15",
-    "pdf_path": "data/mock_pdfs/file4.pdf"
+    "pdf_path": "data/mock_pdfs/file2.pdf"
   },
   {
     "id": 12,
@@ -166,7 +166,7 @@
     "recommendations": "Отдых",
     "is_temp": false,
     "date_return": "2025-05-20",
-    "pdf_path": "data/mock_pdfs/file6.pdf"
+    "pdf_path": "data/mock_pdfs/file3.pdf"
   },
   {
     "id": 13,
@@ -208,7 +208,7 @@
     "recommendations": "Диета, гастроэнтеролог",
     "is_temp": true,
     "date_return": "2025-06-10",
-    "pdf_path": "data/mock_pdfs/file5.pdf"
+    "pdf_path": "data/mock_pdfs/file2.pdf"
   },
   {
     "id": 16,
@@ -236,7 +236,7 @@
     "recommendations": "Ингалятор, прогулки",
     "is_temp": false,
     "date_return": "2025-06-20",
-    "pdf_path": "data/mock_pdfs/file6.pdf"
+    "pdf_path": "data/mock_pdfs/file3.pdf"
   },
   {
     "id": 18,
@@ -250,7 +250,7 @@
     "recommendations": "След. прививка через год",
     "is_temp": false,
     "date_return": "2025-06-25",
-    "pdf_path": "data/mock_pdfs/file4.pdf"
+    "pdf_path": "data/mock_pdfs/file2.pdf"
   },
   {
     "id": 19,
@@ -306,7 +306,7 @@
     "recommendations": "Очки, проверка каждые 6 мес",
     "is_temp": false,
     "date_return": "2025-07-15",
-    "pdf_path": "data/mock_pdfs/file6.pdf"
+    "pdf_path": "data/mock_pdfs/file3.pdf"
   },
   {
     "id": 23,
@@ -320,7 +320,7 @@
     "recommendations": "Антибиотики",
     "is_temp": true,
     "date_return": "2025-07-20",
-    "pdf_path": "data/mock_pdfs/file5.pdf"
+    "pdf_path": "data/mock_pdfs/file2.pdf"
   },
   {
     "id": 24,
@@ -348,7 +348,7 @@
     "recommendations": "Физиотерапия",
     "is_temp": true,
     "date_return": "2025-07-30",
-    "pdf_path": "data/mock_pdfs/file4.pdf"
+    "pdf_path": "data/mock_pdfs/file2.pdf"
   },
   {
     "id": 26,
@@ -376,7 +376,7 @@
     "recommendations": "Препараты железа",
     "is_temp": true,
     "date_return": "2025-08-10",
-    "pdf_path": "data/mock_pdfs/file5.pdf"
+    "pdf_path": "data/mock_pdfs/file2.pdf"
   },
   {
     "id": 28,
@@ -390,7 +390,7 @@
     "recommendations": "Справка выдана",
     "is_temp": false,
     "date_return": "2025-08-15",
-    "pdf_path": "data/mock_pdfs/file6.pdf"
+    "pdf_path": "data/mock_pdfs/file3.pdf"
   },
   {
     "id": 29,
