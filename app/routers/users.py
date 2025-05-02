@@ -27,10 +27,18 @@ def get_users(
 
     result = []
     for user in users:
+        avatar_path = None
+        if user.avatar_path:
+            avatar_path = f"/static/{user.avatar_path}"
+
+        avatar_small_path = None
+        if user.avatar_small_path:
+            avatar_small_path = f"/static/{user.avatar_small_path}"
+
         result.append({
             "id": user.id,
-            "avatar": user.avatar,
-            "avatar_small": user.avatar_small,
+            "avatar_path": avatar_path,
+            "avatar_small_path": avatar_small_path,
             "name": user.name,
             "birth_date": user.birth_date,
             "gender": user.gender,

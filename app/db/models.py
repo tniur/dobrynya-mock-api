@@ -42,8 +42,8 @@ user_professions = Table(
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True)
-    avatar = Column(String)
-    avatar_small = Column(String)
+    avatar_path = Column(String, nullable=True)
+    avatar_small_path = Column(String, nullable=True)
     name = Column(String)
     birth_date = Column(String)
     gender = Column(String)
