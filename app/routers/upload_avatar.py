@@ -39,8 +39,12 @@ def upload_patient_avatar(data: AvatarUploadRequest, db: Session = Depends(get_d
     patient.avatar_path = f"avatars/{filename}"
     db.commit()
 
+    new_avatar_path = None
+    if patient.avatar_path:
+        new_avatar_path = f"/static/{patient.avatar_path}"
+
     return {
         "success": True,
-        "avatar_url": patient.avatar_path,
+        "avatar_path": new_avatar_path,
         "message": "JPEG avatar uploaded successfully"
     }
