@@ -12,8 +12,8 @@ def create_appointment(
     patient_key: str = Body(...),
     doctor_id: int = Body(...),
     clinic_id: int = Body(...),
-    time_start: str = Body(...),  # "dd.mm.yyyy hh:mm"
-    time_end: str = Body(...),    # "dd.mm.yyyy hh:mm"
+    time_start: str = Body(...),  # "yyyy-mm-dd hh:mm"
+    time_end: str = Body(...),    # "yyyy-mm-dd hh:mm"
     db: Session = Depends(get_db)
 ):
     patient_key_entry = db.query(PatientKey).filter(PatientKey.key == patient_key).first()
@@ -21,10 +21,10 @@ def create_appointment(
         raise HTTPException(status_code=401, detail="Invalid patient_key")
 
     try:
-        dt_start = datetime.strptime(time_start, "%d.%m.%Y %H:%M")
-        dt_end = datetime.strptime(time_end, "%d.%m.%Y %H:%M")
+        dt_start = datetime.strptime(time_start, "%Y-%m-%d %H:%M")
+        dt_end = datetime.strptime(time_end, "%Y-%m-%d %H:%M")
     except ValueError:
-        raise HTTPException(status_code=400, detail="Invalid date format. Use dd.mm.yyyy hh:mm")
+        raise HTTPException(status_code=400, detail="Invalid date format. Use yyyy-mm-dd hh:mm")
 
     date_str = dt_start.strftime("%Y-%m-%d")
     time_str = f"{dt_start.strftime('%H:%M')} - {dt_end.strftime('%H:%M')}"
