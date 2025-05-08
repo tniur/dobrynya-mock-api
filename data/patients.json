@@ -8,6 +8,7 @@
     "gender": "male",
     "mobile": "+79991234567",
     "email": "smirnov@example.com",
+    "password": "password1",
     "avatar_path": null
   },
   {
@@ -19,6 +20,7 @@
     "gender": "female",
     "mobile": "+79999876543",
     "email": "ivanova@example.com",
+    "password": "password2",
     "avatar_path": "avatars/avatar1.png"
   }
 ]

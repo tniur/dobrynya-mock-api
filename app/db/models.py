@@ -88,6 +88,7 @@ class Patient(Base):
     gender = Column(String)
     mobile = Column(String)
     email = Column(String)
+    password = Column(String)
     avatar_path = Column(String, nullable=True)
 
 class PatientKey(Base):
