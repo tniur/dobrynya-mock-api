@@ -2,7 +2,7 @@ import base64
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.db.database import get_db
-from app.db.models import PatientKey, PatientLabResult, PatientLabResultDetail
+from app.db.models import PatientKey, PatientLabResult, PatientLabResultDetail, Service
 
 router = APIRouter()
 
@@ -33,9 +33,15 @@ def get_lab_result_details(patient_key: str, result_id: int, db: Session = Depen
         except FileNotFoundError:
             continue
 
+    service = db.query(Service).filter_by(id=result.service_id).first()
+    service_name = service.title
+
     result = {
         "date_created": result.date_created,
         "clinic_id": result.clinic_id,
+        "service_id": result.service_id,
+        "service_name": service_name,
+        "status": result.status,
         "pdf_files": pdf_files
     }
     return {"data": result}

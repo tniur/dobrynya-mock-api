@@ -1,87 +1,87 @@
 [
-    { "result_id": 1, "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 1, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file2.pdf" },
 
-    { "result_id": 2, "file_path": "data/mock_pdfs/file3.pdf" },
-    { "result_id": 2, "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 2, "service_id": 12, "status": "abnormal", "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 2, "service_id": 12, "status": "abnormal", "file_path": "data/mock_pdfs/file2.pdf" },
 
-    { "result_id": 3, "file_path": "data/mock_pdfs/file1.pdf" },
-    { "result_id": 3, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 3, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 3, "service_id": 14, "status": "in_progress", "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 3, "service_id": 14, "status": "in_progress", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 3, "service_id": 14, "status": "in_progress", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 4, "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 4, "service_id": 13, "status": "abnormal", "file_path": "data/mock_pdfs/file2.pdf" },
 
-    { "result_id": 5, "file_path": "data/mock_pdfs/file1.pdf" },
-    { "result_id": 5, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 5, "service_id": 14, "status": "normal", "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 5, "service_id": 14, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 6, "file_path": "data/mock_pdfs/file1.pdf" },
-    { "result_id": 6, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 6, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 6, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 6, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 6, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 7, "file_path": "data/mock_pdfs/file3.pdf" },
-    { "result_id": 7, "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 7, "service_id": 12, "status": "in_progress", "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 7, "service_id": 12, "status": "in_progress", "file_path": "data/mock_pdfs/file2.pdf" },
 
-    { "result_id": 8, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 8, "service_id": 14, "status": "in_progress", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 9, "file_path": "data/mock_pdfs/file1.pdf" },
-    { "result_id": 9, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 9, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 9, "service_id": 13, "status": "abnormal", "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 9, "service_id": 13, "status": "abnormal", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 9, "service_id": 13, "status": "abnormal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 10, "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 10, "service_id": 12, "status": "abnormal", "file_path": "data/mock_pdfs/file2.pdf" },
 
-    { "result_id": 11, "file_path": "data/mock_pdfs/file3.pdf" },
-    { "result_id": 11, "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 11, "service_id": 13, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 11, "service_id": 13, "status": "normal", "file_path": "data/mock_pdfs/file1.pdf" },
 
-    { "result_id": 12, "file_path": "data/mock_pdfs/file3.pdf" },
-    { "result_id": 12, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 12, "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 12, "service_id": 14, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 12, "service_id": 14, "status": "normal", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 12, "service_id": 14, "status": "normal", "file_path": "data/mock_pdfs/file1.pdf" },
 
-    { "result_id": 13, "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 13, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file1.pdf" },
 
-    { "result_id": 14, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 14, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 14, "service_id": 12, "status": "in_progress", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 14, "service_id": 12, "status": "in_progress", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 15, "file_path": "data/mock_pdfs/file1.pdf" },
-    { "result_id": 15, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 15, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 15, "service_id": 14, "status": "abnormal", "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 15, "service_id": 14, "status": "abnormal", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 15, "service_id": 14, "status": "abnormal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 16, "file_path": "data/mock_pdfs/file1.pdf" },
-    { "result_id": 16, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 16, "service_id": 11, "status": "abnormal", "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 16, "service_id": 11, "status": "abnormal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 17, "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 17, "service_id": 12, "status": "normal", "file_path": "data/mock_pdfs/file2.pdf" },
 
-    { "result_id": 18, "file_path": "data/mock_pdfs/file3.pdf" },
-    { "result_id": 18, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 18, "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 18, "service_id": 14, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 18, "service_id": 14, "status": "normal", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 18, "service_id": 14, "status": "normal", "file_path": "data/mock_pdfs/file1.pdf" },
 
-    { "result_id": 19, "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 19, "service_id": 13, "status": "in_progress", "file_path": "data/mock_pdfs/file2.pdf" },
 
-    { "result_id": 20, "file_path": "data/mock_pdfs/file3.pdf" },
-    { "result_id": 20, "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 20, "service_id": 12, "status": "in_progress", "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 20, "service_id": 12, "status": "in_progress", "file_path": "data/mock_pdfs/file2.pdf" },
 
-    { "result_id": 21, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 21, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 22, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 22, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 22, "service_id": 12, "status": "normal", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 22, "service_id": 12, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 23, "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 23, "service_id": 14, "status": "abnormal", "file_path": "data/mock_pdfs/file1.pdf" },
 
-    { "result_id": 24, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 24, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 24, "service_id": 13, "status": "abnormal", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 24, "service_id": 13, "status": "abnormal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 25, "file_path": "data/mock_pdfs/file3.pdf" },
-    { "result_id": 25, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 25, "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 25, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 25, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 25, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file1.pdf" },
 
-    { "result_id": 26, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 26, "service_id": 12, "status": "abnormal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 27, "file_path": "data/mock_pdfs/file1.pdf" },
-    { "result_id": 27, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 27, "service_id": 13, "status": "normal", "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 27, "service_id": 13, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 28, "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 28, "service_id": 14, "status": "in_progress", "file_path": "data/mock_pdfs/file2.pdf" },
 
-    { "result_id": 29, "file_path": "data/mock_pdfs/file3.pdf" },
+    { "result_id": 29, "service_id": 12, "status": "in_progress", "file_path": "data/mock_pdfs/file3.pdf" },
 
-    { "result_id": 30, "file_path": "data/mock_pdfs/file2.pdf" },
-    { "result_id": 30, "file_path": "data/mock_pdfs/file1.pdf" },
-    { "result_id": 30, "file_path": "data/mock_pdfs/file3.pdf" }
+    { "result_id": 30, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file2.pdf" },
+    { "result_id": 30, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file1.pdf" },
+    { "result_id": 30, "service_id": 11, "status": "normal", "file_path": "data/mock_pdfs/file3.pdf" }
 ]

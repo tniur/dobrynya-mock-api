@@ -105,12 +105,16 @@ class PatientLabResult(Base):
     patient_id = Column(Integer, ForeignKey("patients.id"))
     date_created = Column(String)
     clinic_id = Column(Integer, ForeignKey("clinics.id"))
+    service_id = Column(Integer, ForeignKey("services.id"))
+    status = Column(String)  # "normal", "abnormal", "in_progress"
     files_count = Column(Integer)
 
 class PatientLabResultDetail(Base):
     __tablename__ = "patient_lab_result_details"
     id = Column(Integer, primary_key=True)
     result_id = Column(Integer, ForeignKey("patient_lab_results.id"))
+    service_id = Column(Integer, ForeignKey("services.id"))
+    status = Column(String)  # "normal", "abnormal", "in_progress"
     file_path = Column(String)
 
 class PatientDocument(Base):
