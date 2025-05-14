@@ -8,6 +8,7 @@
     "time_end": "2025-04-05 12:30",
     "clinic_id": 1,
     "doctor_id": 1,
+    "service_id": 16,
     "created": "2025-04-01",
     "status": "completed"
   },
@@ -20,6 +21,7 @@
     "time_end": "2025-04-10 10:30",
     "clinic_id": 2,
     "doctor_id": 7,
+    "service_id": 21,
     "created": "2025-04-02",
     "status": "upcoming"
   },
@@ -32,6 +34,7 @@
     "time_end": "2025-04-03 14:30",
     "clinic_id": 1,
     "doctor_id": 14,
+    "service_id": 32,
     "created": "2025-03-30",
     "status": "refused"
   },
@@ -44,6 +47,7 @@
     "time_end": "2025-05-28 09:30",
     "clinic_id": 2,
     "doctor_id": 26,
+    "service_id": 42,
     "created": "2025-05-25",
     "status": "refused"
   },
@@ -56,6 +60,7 @@
     "time_end": "2025-04-19 12:30",
     "clinic_id": 3,
     "doctor_id": 5,
+    "service_id": 12,
     "created": "2025-04-14",
     "status": "refused"
   },
@@ -68,6 +73,7 @@
     "time_end": "2025-05-27 12:30",
     "clinic_id": 1,
     "doctor_id": 11,
+    "service_id": 24,
     "created": "2025-05-22",
     "status": "completed"
   },
@@ -80,6 +86,7 @@
     "time_end": "2025-04-20 11:30",
     "clinic_id": 3,
     "doctor_id": 8,
+    "service_id": 22,
     "created": "2025-04-17",
     "status": "upcoming"
   },
@@ -92,6 +99,7 @@
     "time_end": "2025-04-25 09:30",
     "clinic_id": 3,
     "doctor_id": 17,
+    "service_id": 10,
     "created": "2025-04-21",
     "status": "completed"
   },
@@ -104,6 +112,7 @@
     "time_end": "2025-05-10 14:30",
     "clinic_id": 1,
     "doctor_id": 19,
+    "service_id": 46,
     "created": "2025-05-08",
     "status": "refused"
   },
@@ -116,6 +125,7 @@
     "time_end": "2025-04-30 10:30",
     "clinic_id": 2,
     "doctor_id": 2,
+    "service_id": 6,
     "created": "2025-04-27",
     "status": "completed"
   },
@@ -128,6 +138,7 @@
     "time_end": "2025-05-15 15:30",
     "clinic_id": 1,
     "doctor_id": 28,
+    "service_id": 30,
     "created": "2025-05-11",
     "status": "upcoming"
   },
@@ -140,6 +151,7 @@
     "time_end": "2025-05-20 09:30",
     "clinic_id": 3,
     "doctor_id": 6,
+    "service_id": 14,
     "created": "2025-05-18",
     "status": "completed"
   },
@@ -152,6 +164,7 @@
     "time_end": "2025-04-18 10:30",
     "clinic_id": 2,
     "doctor_id": 12,
+    "service_id": 25,
     "created": "2025-04-16",
     "status": "completed"
   },
@@ -164,6 +177,7 @@
     "time_end": "2025-05-05 14:30",
     "clinic_id": 2,
     "doctor_id": 3,
+    "service_id": 18,
     "created": "2025-05-01",
     "status": "upcoming"
   },
@@ -176,6 +190,7 @@
     "time_end": "2025-04-12 11:30",
     "clinic_id": 1,
     "doctor_id": 9,
+    "service_id": 21,
     "created": "2025-04-09",
     "status": "refused"
   },
@@ -188,6 +203,7 @@
     "time_end": "2025-04-06 12:30",
     "clinic_id": 3,
     "doctor_id": 25,
+    "service_id": 9,
     "created": "2025-04-03",
     "status": "completed"
   },
@@ -200,6 +216,7 @@
     "time_end": "2025-05-01 10:30",
     "clinic_id": 2,
     "doctor_id": 20,
+    "service_id": 7,
     "created": "2025-04-27",
     "status": "upcoming"
   },
@@ -212,6 +229,7 @@
     "time_end": "2025-05-12 09:30",
     "clinic_id": 1,
     "doctor_id": 15,
+    "service_id": 35,
     "created": "2025-05-10",
     "status": "refused"
   },
@@ -224,6 +242,7 @@
     "time_end": "2025-04-16 15:30",
     "clinic_id": 2,
     "doctor_id": 18,
+    "service_id": 39,
     "created": "2025-04-12",
     "status": "completed"
   },
@@ -236,6 +255,7 @@
     "time_end": "2025-05-22 11:30",
     "clinic_id": 1,
     "doctor_id": 10,
+    "service_id": 25,
     "created": "2025-05-19",
     "status": "upcoming"
   },
@@ -248,6 +268,7 @@
     "time_end": "2025-04-14 14:30",
     "clinic_id": 2,
     "doctor_id": 4,
+    "service_id": 14,
     "created": "2025-04-10",
     "status": "refused"
   },
@@ -260,6 +281,7 @@
     "time_end": "2025-04-26 11:30",
     "clinic_id": 3,
     "doctor_id": 6,
+    "service_id": 13,
     "created": "2025-04-22",
     "status": "completed"
   },
@@ -272,6 +294,7 @@
     "time_end": "2025-05-02 10:30",
     "clinic_id": 2,
     "doctor_id": 29,
+    "service_id": 26,
     "created": "2025-04-29",
     "status": "completed"
   },
@@ -284,6 +307,7 @@
     "time_end": "2025-04-09 09:30",
     "clinic_id": 1,
     "doctor_id": 7,
+    "service_id": 22,
     "created": "2025-04-05",
     "status": "upcoming"
   },
@@ -296,6 +320,7 @@
     "time_end": "2025-04-28 15:30",
     "clinic_id": 3,
     "doctor_id": 16,
+    "service_id": 2,
     "created": "2025-04-25",
     "status": "refused"
   },
@@ -308,6 +333,7 @@
     "time_end": "2025-04-24 12:30",
     "clinic_id": 2,
     "doctor_id": 21,
+    "service_id": 49,
     "created": "2025-04-20",
     "status": "completed"
   },
@@ -320,6 +346,7 @@
     "time_end": "2025-05-14 10:30",
     "clinic_id": 3,
     "doctor_id": 30,
+    "service_id": 28,
     "created": "2025-05-11",
     "status": "upcoming"
   },
@@ -332,6 +359,7 @@
     "time_end": "2025-05-06 09:30",
     "clinic_id": 1,
     "doctor_id": 22,
+    "service_id": 5,
     "created": "2025-05-04",
     "status": "refused"
   },
@@ -344,6 +372,7 @@
     "time_end": "2025-04-17 14:30",
     "clinic_id": 2,
     "doctor_id": 13,
+    "service_id": 35,
     "created": "2025-04-13",
     "status": "completed"
   },
@@ -356,6 +385,7 @@
     "time_end": "2025-05-08 11:30",
     "clinic_id": 3,
     "doctor_id": 24,
+    "service_id": 8,
     "created": "2025-05-06",
     "status": "completed"
   }

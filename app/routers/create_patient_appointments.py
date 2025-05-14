@@ -12,6 +12,7 @@ def create_appointment(
     patient_key: str = Body(...),
     doctor_id: int = Body(...),
     clinic_id: int = Body(...),
+    service_id: int = Body(...),
     time_start: str = Body(...),  # "yyyy-mm-dd hh:mm"
     time_end: str = Body(...),    # "yyyy-mm-dd hh:mm"
     db: Session = Depends(get_db)
@@ -37,6 +38,7 @@ def create_appointment(
         patient_id=patient_key_entry.patient_id,
         doctor_id=doctor_id,
         clinic_id=clinic_id,
+        service_id=service_id,
         date=date_str,
         time=time_str,
         time_start=time_start_str,

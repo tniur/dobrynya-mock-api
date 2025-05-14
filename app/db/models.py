@@ -147,6 +147,7 @@ class PatientAppointment(Base):
     time_end = Column(String)    # Формат: "2025-04-07 12:30"
     clinic_id = Column(Integer, ForeignKey("clinics.id"))
     doctor_id = Column(Integer, ForeignKey("users.id"))
+    service_id = Column(Integer, ForeignKey("services.id"))
     created = Column(String)  # Дата создания записи
     status = Column(String)   # "upcoming", "completed", "refused"
 
