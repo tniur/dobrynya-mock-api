@@ -35,6 +35,10 @@ def get_users(
         if user.avatar_small_path:
             avatar_small_path = f"/static/{user.avatar_small_path}"
 
+        professions = user.professions
+        profession_ids = [p.id for p in professions]
+        professions_title = ", ".join(p.doctor_name.lower() for p in professions if p.doctor_name)
+
         result.append({
             "id": user.id,
             "avatar_path": avatar_path,
@@ -44,7 +48,8 @@ def get_users(
             "gender": user.gender,
             "phone": user.phone,
             "email": user.email,
-            "profession": [p.id for p in user.professions],
+            "profession_ids": profession_ids,
+            "professions_title": professions_title,
             "clinic": [c.id for c in user.clinics],
             "services": [s.id for s in user.services],
         })
