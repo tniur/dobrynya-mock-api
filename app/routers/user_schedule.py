@@ -28,7 +28,7 @@ def get_user_schedule(
 
     for day_offset in range(5):
         date = today + timedelta(days=day_offset)
-        slots_count = random.randint(4, 12)
+        slots_count = random.randint(4, 10)
         start_hour = 9
 
         for slot in range(slots_count):
@@ -47,7 +47,7 @@ def get_user_schedule(
                 "time_start_short": time_start_short,
                 "time_end": time_end_str,
                 "time_end_short": time_end_short,
-                "room": room_number,
+                "room": str(room_number),
                 "is_busy": False
             })
 
