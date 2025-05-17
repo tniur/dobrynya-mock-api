@@ -6,7 +6,7 @@ import uuid
 
 router = APIRouter()
 
-@router.post("/auth/recover/setPassword")
+@router.post("/recover/setPassword")
 def recover_set_password(
     email: str = Body(...),
     new_password: str = Body(...),

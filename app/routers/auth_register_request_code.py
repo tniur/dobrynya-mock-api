@@ -5,7 +5,7 @@ from app.db.models import Patient
 
 router = APIRouter()
 
-@router.post("/auth/register/requestCode")
+@router.post("/register/requestCode")
 def register_request_code(
     email: str = Body(...),
     mobile: str = Body(...),

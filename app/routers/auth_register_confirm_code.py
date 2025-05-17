@@ -6,7 +6,7 @@ import uuid
 
 router = APIRouter()
 
-@router.post("/auth/register/confirmCode")
+@router.post("/register/confirmCode")
 def register_confirm_code(
     email: str = Body(...),
     password: str = Body(...),

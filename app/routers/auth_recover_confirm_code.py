@@ -5,7 +5,7 @@ from app.db.models import Patient
 
 router = APIRouter()
 
-@router.post("/auth/recover/confirmCode")
+@router.post("/recover/confirmCode")
 def recover_confirm_code(
     email: str = Body(...),
     code: str = Body(...),
