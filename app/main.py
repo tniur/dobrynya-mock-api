@@ -5,7 +5,8 @@ from app.routers import (
     clinics, professions, users, service_categories, services, patients, patient_lab_results,
     patients_lab_results_details, patient_documents, patient_document_details, patient_consultations,
     patient_consultation_details, patient_appointments, create_patient_appointments, cancel_patient_appointment,
-    user_schedule, upload_avatar, auth_request_code, auth_confirm_code, auth_recover_confirm_сode, auth_recover_request_сode, auth_recover_set_password
+    user_schedule, upload_avatar, auth_request_code, auth_confirm_code, auth_recover_confirm_сode,
+    auth_recover_request_сode, auth_recover_set_password, auth_register_request_code, auth_register_confirm_code
 )
 
 app = FastAPI(title="Mock DobrynyaNN API")
@@ -33,3 +34,5 @@ app.include_router(auth_confirm_code.router, tags=["Confirm auth code"])
 app.include_router(auth_recover_request_сode.router, tags=["Recover request auth code"])
 app.include_router(auth_recover_confirm_сode.router, tags=["Recover confirm auth code"])
 app.include_router(auth_recover_set_password.router, tags=["Recover set password"])
+app.include_router(auth_register_request_code.router, tags=["Register request code"])
+app.include_router(auth_register_confirm_code.router, tags=["Register set password"])
