@@ -81,11 +81,11 @@ class Service(Base):
 class Patient(Base):
     __tablename__ = "patients"
     id = Column(Integer, primary_key=True)
-    last_name = Column(String)
-    first_name = Column(String)
-    third_name = Column(String)
-    birth_date = Column(String)
-    gender = Column(String)
+    last_name = Column(String, nullable=True)
+    first_name = Column(String, nullable=True)
+    third_name = Column(String, nullable=True)
+    birth_date = Column(String, nullable=True)
+    gender = Column(String, nullable=True)
     mobile = Column(String)
     email = Column(String)
     password = Column(String)

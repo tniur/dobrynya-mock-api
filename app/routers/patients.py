@@ -19,19 +19,17 @@ def get_patient_info(patient_key: str = Query(...), db: Session = Depends(get_db
 
     patient = key_entry.patient
 
-    avatar_path = None
-    if patient.avatar_path:
-        avatar_path = f"/static/{patient.avatar_path}"
+    avatar_path = f"/static/{patient.avatar_path}" if patient.avatar_path else None
 
     result = {
-        "last_name": patient.last_name,
-        "first_name": patient.first_name,
-        "third_name": patient.third_name,
-        "birth_date": patient.birth_date,
-        "age": calculate_age(patient.birth_date),
-        "gender": patient.gender,
+        "last_name": patient.last_name or None,
+        "first_name": patient.first_name or None,
+        "third_name": patient.third_name or None,
+        "birth_date": patient.birth_date or None,
+        "age": calculate_age(patient.birth_date) if patient.birth_date else None,
+        "gender": patient.gender or None,
         "mobile": patient.mobile,
         "email": patient.email,
-        "avatar_path": avatar_path,
+        "avatar_path": avatar_path or None,
     }
     return {"data": result}
