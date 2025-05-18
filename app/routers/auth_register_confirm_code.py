@@ -19,7 +19,7 @@ def register_confirm_code(
 
     existing_patient = db.query(Patient).filter(Patient.email == email).first()
     if existing_patient:
-        raise HTTPException(status_code=400, detail="Email already registered")
+        raise HTTPException(status_code=409, detail="Email already registered")
 
     new_patient = Patient(
         email=email,
