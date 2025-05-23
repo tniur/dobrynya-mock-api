@@ -29,6 +29,7 @@ def get_patient_appointments(
 
         clinic = db.query(Clinic).filter_by(id=appointment.clinic_id).first()
         clinic_address = clinic.real_address
+        clinic_title = clinic.title
 
         service = db.query(Service).filter_by(id=appointment.service_id).first()
         service_name = service.title
@@ -41,6 +42,7 @@ def get_patient_appointments(
                 "time_end": appointment.time_end,
                 "clinic_id": appointment.clinic_id,
                 "clinic_address": clinic_address,
+                "clinic_title": clinic_title,
                 "doctor_id": appointment.doctor_id,
                 "doctor_name": doctor_name,
                 "service_id": appointment.service_id,
