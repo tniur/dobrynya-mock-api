@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from app.db.database import get_db
-from app.db.models import PatientKey
+from app.db.models import PatientKey, User
 from app.db import crud
 
 router = APIRouter()
@@ -18,13 +18,17 @@ def get_patient_consultations(
 
     consultations = crud.get_consultations_by_patient(db, patient_key_entry.patient_id, status)
 
-    result = [
-        {
+    result = []
+    for consult in consultations:
+        doctor = db.query(User).filter_by(id=consult.doctor_id).first()
+        doctor_name = doctor.name
+
+        result.append({
             "id": consult.id,
             "title": consult.title,
             "doctor_id": consult.doctor_id,
+            "doctor_name": doctor_name,
             "status": consult.status
-        }
-        for consult in consultations
-    ]
+        })
+
     return {"data": result}
