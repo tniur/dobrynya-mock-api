@@ -1,4 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
+from pydantic import BaseModel
+from typing import Optional
 from sqlalchemy.orm import Session
 from app.db.database import get_db
 from app.db.models import PatientKey
@@ -33,3 +35,32 @@ def get_patient_info(patient_key: str = Query(...), db: Session = Depends(get_db
         "avatar_path": avatar_path or None,
     }
     return {"data": result}
+
+class UpdatePatientInfo(BaseModel):
+    patient_key: str
+    last_name: str
+    first_name: str
+    third_name: Optional[str] = None
+
+@router.put("/updatePatientInfo")
+def update_patient_info(
+    data: UpdatePatientInfo,
+    db: Session = Depends(get_db)
+):
+    key_entry = db.query(PatientKey).filter_by(key=data.patient_key).first()
+    if not key_entry:
+        raise HTTPException(status_code=401, detail="Invalid patient_key")
+
+    patient = key_entry.patient
+
+    patient.last_name = data.last_name
+    patient.first_name = data.first_name
+    patient.third_name = data.third_name
+
+    db.commit()
+
+    return {
+        "data": {
+            "message": "Update patient info successful",
+        }
+    }
