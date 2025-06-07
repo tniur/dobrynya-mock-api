@@ -8,11 +8,11 @@ router = APIRouter()
 @router.get("/getClinics")
 def get_clinics(
     db: Session = Depends(get_db),
-    accept_language: str = Header(default="en-US")
+    accept_language: str = Header(default="ru")
 ):
-    lang = "en"
-    if "ru-RU" in accept_language:
-        lang = "ru-RU"
+    lang = "ru"
+    if "en" in accept_language:
+        lang = "en"
 
     clinics = crud.get_all_clinics(db)
 
