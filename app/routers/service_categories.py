@@ -8,13 +8,13 @@ router = APIRouter()
 @router.get("/getServiceCategories")
 def get_service_categories(
     db: Session = Depends(get_db),
-    accept_language: str = Header(default="ru")
+    accept_language: str = Header(default="en-US")
 ):
     categories = crud.get_all_service_categories(db)
 
-    lang = "ru"
-    if "en" in accept_language.lower():
-        lang = "en"
+    lang = "en"
+    if "ru-RU" in accept_language:
+        lang = "ru-RU"
 
     result = [
         {
