@@ -1,42 +1,52 @@
 [
   {
     "id": 1,
-    "title": "Экстренная помощь"
+    "title_ru": "Экстренная помощь",
+    "title_en": "Emergency assistance"
   },
   {
     "id": 2,
-    "title": "Консультации специалистов"
+    "title_ru": "Консультации специалистов",
+    "title_en": "Specialist consultations"
   },
   {
     "id": 3,
-    "title": "Лабораторные исследования"
+    "title_ru": "Лабораторные исследования",
+    "title_en": "Laboratory tests"
   },
   {
     "id": 4,
-    "title": "Профилактические осмотры"
+    "title_ru": "Профилактические осмотры",
+    "title_en": "Routine checkups"
   },
   {
     "id": 5,
-    "title": "Диагностические исследования"
+    "title_ru": "Диагностические исследования",
+    "title_en": "Diagnostic tests"
   },
   {
     "id": 6,
-    "title": "Реабилитационные программы"
+    "title_ru": "Реабилитационные программы",
+    "title_en": "Rehabilitation programs"
   },
   {
     "id": 7,
-    "title": "Стоматологические услуги"
+    "title_ru": "Стоматологические услуги",
+    "title_en": "Dental services"
   },
   {
     "id": 8,
-    "title": "Иммунологические исследования"
+    "title_ru": "Иммунологические исследования",
+    "title_en": "Immunological research"
   },
   {
     "id": 9,
-    "title": "Дерматология и косметология"
+    "title_ru": "Дерматология и косметология",
+    "title_en": "Dermatology and Cosmetology"
   },
   {
     "id": 10,
-    "title": "Кардиология"
+    "title_ru": "Кардиология",
+    "title_en": "Cardiology"
   }
 ]

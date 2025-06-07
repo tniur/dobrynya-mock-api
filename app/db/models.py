@@ -7,9 +7,12 @@ Base = declarative_base()
 class Clinic(Base):
     __tablename__ = "clinics"
     id = Column(Integer, primary_key=True)
-    title = Column(String)
-    doctor_name = Column(String)
-    real_address = Column(String)
+    title_ru = Column(String)
+    title_en = Column(String)
+    doctor_name_ru = Column(String)
+    doctor_name_en = Column(String)
+    real_address_ru = Column(String)
+    real_address_en = Column(String)
     phone = Column(String)
 
 class Profession(Base):
@@ -57,7 +60,8 @@ class User(Base):
 class ServiceCategories(Base):
     __tablename__ = "service_categories"
     id = Column(Integer, primary_key=True)
-    title = Column(String)
+    title_ru = Column(String)
+    title_en = Column(String)
 
 service_service_categories = Table(
     "service_service_categories",

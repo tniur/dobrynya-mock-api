@@ -1,23 +1,32 @@
 [
   {
     "id": 1,
-    "title": "Добрыня НН",
-    "doctor_name": "Иванов Иван Иванович",
-    "real_address": "ул. Ленина, д. 10, г. Нижний Новгород",
+    "title_ru": "Добрыня НН",
+    "title_en": "Dobrynya NN",
+    "doctor_name_ru": "Иванов Иван Иванович",
+    "doctor_name_en": "Ivanov Ivan Ivanovich",
+    "real_address_ru": "ул. Ленина, д. 10, г. Нижний Новгород",
+    "real_address_en": "Lenin St., 10, Nizhny Novgorod",
     "phone": "+7 (495) 123-45-67"
   },
   {
     "id": 2,
-    "title": "Добрыня СПб",
-    "doctor_name": "Петрова Мария Сергеевна",
-    "real_address": "Невский проспект, д. 25, г. Санкт-Петербург",
+    "title_ru": "Добрыня СПб",
+    "title_en": "Dobrynya SPb",
+    "doctor_name_ru": "Петрова Мария Сергеевна",
+    "doctor_name_en": "Petrova Maria Sergeevna",
+    "real_address_ru": "Невский проспект, д. 25, г. Санкт-Петербург",
+    "real_address_en": "Nevsky Prospekt, 25, St. Petersburg",
     "phone": "+7 (812) 765-43-21"
   },
   {
     "id": 3,
-    "title": "Добрыня Мск",
-    "doctor_name": "Иванов Иван Иванович",
-    "real_address": "ул. Ленина, д. 10, г. Москва",
+    "title_ru": "Добрыня Мск",
+    "title_en": "Dobrynya Msk",
+    "doctor_name_ru": "Петров Иван Иванович",
+    "doctor_name_en": "Petrov Ivan Ivanovich",
+    "real_address_ru": "ул. Ленина, д. 98, г. Москва",
+    "real_address_en": "Lenin St., 98, Moscow",
     "phone": "+7 (495) 123-45-67"
   }
 ]
