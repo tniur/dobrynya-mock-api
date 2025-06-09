@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Header
 from typing import Optional
 from sqlalchemy.orm import Session
 from app.db.database import get_db
@@ -11,8 +11,13 @@ router = APIRouter()
 def get_patient_appointments(
         patient_key: str = Query(...),
         appointment_id: Optional[str] = Query(None),
-        db: Session = Depends(get_db)
+        db: Session = Depends(get_db),
+        accept_language: str = Header(default="ru")
 ):
+    lang = "ru"
+    if "en" in accept_language:
+        lang = "en"
+
     patient_key_entry = db.query(PatientKey).filter(PatientKey.key == patient_key).first()
     if not patient_key_entry:
         raise HTTPException(status_code=401, detail="Invalid patient_key")
@@ -28,8 +33,8 @@ def get_patient_appointments(
         doctor_name = doctor.name
 
         clinic = db.query(Clinic).filter_by(id=appointment.clinic_id).first()
-        clinic_address = clinic.real_address
-        clinic_title = clinic.title
+        clinic_address = clinic.real_address_en if lang == "en" else clinic.real_address_ru
+        clinic_title = clinic.title_en if lang == "en" else clinic.title_ru
 
         service = db.query(Service).filter_by(id=appointment.service_id).first()
         service_name = service.title
