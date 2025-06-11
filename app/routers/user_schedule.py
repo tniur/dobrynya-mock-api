@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, Query, HTTPException
 from sqlalchemy.orm import Session
 from app.db.database import get_db
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from app.db.models import User
 import random
 
@@ -21,7 +22,10 @@ def get_user_schedule(
     if clinic_id not in clinic_ids:
         return {"data": []}
 
+    moscow_tz = ZoneInfo("Europe/Moscow")
+    now = datetime.now(moscow_tz)
     today = datetime.now().date()
+
     room_number = random.randint(1, 300)
 
     result = []
@@ -29,24 +33,23 @@ def get_user_schedule(
     for day_offset in range(5):
         date = today + timedelta(days=day_offset)
         slots_count = random.randint(4, 10)
-        start_hour = 9
+
+        if day_offset == 0:
+            start_hour = (now + timedelta(hours=1)).replace(minute=0, second=0, microsecond=0).hour
+        else:
+            start_hour = 9
 
         for slot in range(slots_count):
             time_start_dt = datetime.combine(date, datetime.min.time()) + timedelta(hours=start_hour + slot)
             time_end_dt = time_start_dt + timedelta(hours=1)
 
-            time_start_str = time_start_dt.strftime("%Y-%m-%d %H:%M")
-            time_end_str = time_end_dt.strftime("%Y-%m-%d %H:%M")
-            time_start_short = time_start_dt.strftime("%H:%M")
-            time_end_short = time_end_dt.strftime("%H:%M")
-
             result.append({
                 "clinic_id": clinic_id,
                 "date": date.strftime("%Y-%m-%d"),
-                "time_start": time_start_str,
-                "time_start_short": time_start_short,
-                "time_end": time_end_str,
-                "time_end_short": time_end_short,
+                "time_start": time_start_dt.strftime("%Y-%m-%d %H:%M"),
+                "time_start_short": time_start_dt.strftime("%H:%M"),
+                "time_end": time_end_dt.strftime("%Y-%m-%d %H:%M"),
+                "time_end_short": time_end_dt.strftime("%H:%M"),
                 "room": str(room_number),
                 "is_busy": False
             })
