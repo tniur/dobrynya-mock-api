@@ -17,18 +17,18 @@ def register_confirm_code(
     if code != "123456":
         raise HTTPException(status_code=401, detail="Invalid verification code")
 
-    existing_patient = db.query(Patient).filter(Patient.email == email).first()
-    if existing_patient:
-        raise HTTPException(status_code=409, detail="Email already registered")
-
-    new_patient = Patient(
-        email=email,
-        password=password,
-        mobile=mobile
-    )
-    db.add(new_patient)
-    db.commit()
-    db.refresh(new_patient)
+    try:
+        new_patient = Patient(
+            email=email,
+            password=password,
+            mobile=mobile
+        )
+        db.add(new_patient)
+        db.commit()
+        db.refresh(new_patient)
+    except:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Email or mobile already registered")
 
     key_entry = PatientKey(patient_id=new_patient.id, key=str(uuid.uuid4()))
     db.add(key_entry)

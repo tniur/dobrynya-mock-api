@@ -90,8 +90,8 @@ class Patient(Base):
     third_name = Column(String, nullable=True)
     birth_date = Column(String, nullable=True)
     gender = Column(String, nullable=True)
-    mobile = Column(String)
-    email = Column(String)
+    mobile = Column(String, unique=True)
+    email = Column(String, unique=True)
     password = Column(String)
     avatar_path = Column(String, nullable=True)
 
